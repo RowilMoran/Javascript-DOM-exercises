@@ -1,6 +1,6 @@
-import menuHambur from "./hamburger.js";
-import darkAndLight from "./light_night.js"; 
-import scrollButton from "./scroll-button.js";
+import menuHambur from "./modules/hamburger.js";
+import darkAndLight from "./modules/light_night.js"; 
+import scrollButton from "./modules/scroll-button.js";
 
 document.addEventListener("DOMContentLoaded", (e) => {
     menuHambur(".btn", ".panel", ".menu a" );
