@@ -9,6 +9,6 @@ export default function scrollButton(buttonSpot, hiddenClass) {
             $spot.classList.remove(hiddenClass);
         if ($body.scrollTop < initial)
         $spot.classList.add(hiddenClass);  
-});
+    });
 }
 

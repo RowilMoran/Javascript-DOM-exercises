@@ -1,7 +1,7 @@
 export default function darkAndLight(btn, darkClass) {
-    const $button = document.querySelector(btn)
-    const $icon = $button.querySelector('.fa-moon')
-    const $dataDark = document.querySelectorAll("[data-dark]")
+    const $button = document.querySelector(btn);
+    const $icon = $button.querySelector('.fa-moon');
+    const $dataDark = document.querySelectorAll("[data-dark]");
     
     const lightMode = () => {
         $icon.classList.replace("fa-sun", "fa-moon");
@@ -11,9 +11,9 @@ export default function darkAndLight(btn, darkClass) {
     }
 
     const darkMode = () => {
-        $icon.classList.replace("fa-moon", "fa-sun")
+        $icon.classList.replace("fa-moon", "fa-sun");
         $dataDark.forEach(element => element.classList.add(darkClass)); 
-        localStorage.setItem("theme", "dark")
+        localStorage.setItem("theme", "dark");
     }
 
 
@@ -33,5 +33,5 @@ export default function darkAndLight(btn, darkClass) {
         if (localStorage.getItem("theme") === "light") lightMode();
         if (localStorage.getItem("theme") === "dark") darkMode();
 
-    })
+    });
 }
