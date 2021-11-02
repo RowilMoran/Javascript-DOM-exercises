@@ -23,28 +23,196 @@
 
     <aside class="panel">
         <nav class="menu">
-            <a href="#seccion1">Seccion 1</a>
-            <a href="#seccion2">Seccion 2</a>
-            <a href="#seccion3">Seccion 3</a>
-            <a href="#seccion4">Seccion 4</a>
-            <a href="#seccion5">Seccion 5</a>
+            <a href="#seccion1">Clock and Alarm</a>
+            <a href="#seccion2">Shortcut and Key events</a>
+            <a href="#seccion3">Countdown</a>
+            <a href="#seccion4">Responsive tester</a>
+            <a href="#seccion5">Javascript responsive Media</a>
+            <a href="#seccion6">Images carousel</a>
+            <a href="#seccion7">Form Validation</a>
+            <a href="#seccion8">filter images</a>
+            <a href="#seccion9">Loterry</a>
+            <a href="#seccion10">geolocation</a>
         </nav>
     </aside>
 
     <section id="seccion1">
-        <h2>Seccion 1</h2>
+        <h2>Clock and alarm</h2>
+        <audio id="myAudio" loop>
+            <source src="resources/007741419_prev.mp3" type="audio/mpeg">
+        </audio>
+        <div class="container">
+            <div id="MyClockDisplay" class="clock disable"></div>
+            <div class="btn-container">
+                <button class="clock-btn show-clock" type="button">Show Clock</button>
+                <button class="clock-btn hide-clock" type="button">Hide Clock</button>
+                <button class="clock-btn active-alarm" type="button">Alarm</button>
+                <button class="clock-btn disable-alarm" type="button">Disable Alarm</button>
+             </div>
+        </div>
     </section>
     <section id="seccion2">
-        <h2>Seccion 2</h2>
+        <h2>Shortcut and Key events</h2>
+        <div class="instructions container">
+            <div class="shortcuts">
+                <h3>Shortcuts</h3>
+                <ul>
+                    <li>Alt+a: Alert</li>
+                    <li>Alt+c: confirm</li>
+                    <li>Alt+p: pront</li>
+                </ul>
+            </div>
+            <div class="move-ball">
+                <h3>Move the Ball</h3>
+                <p>Use the keyword arrows to move the ball</p>
+            </div>
+        </div>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
     </section>
-    <section id="seccion3">
-        <h2>Seccion 3</h2>
+
+    <section id="seccion3" class="container">
+        <h2>Countdown </h2>
+        <div class="countdown"></div>
     </section>
     <section id="seccion4">
-        <h2>Seccion 4</h2>
+        <h2>Responsive tester</h2>
+        <div class="tester container">
+            <form id="tester-form">
+                <input type="url" name = "url" placeholder="Url"> <br>
+                <input type="text" name = "width" placeholder="width"> <br>
+                <input type="text" name = "height" placeholder="height"> <br>
+                <input type="submit"  name ="submit" value="Test">
+                <input  type="button" name = "close" value="close">
+            </form>
+        </div>
     </section>
     <section id="seccion5">
-        <h2>Seccion 5</h2>
+        <h2>Javascript responsive Media</h2>
+        <div id="youtube"></div>
+        <div id="map"></div>
+     
+    </section>
+
+    <section id="seccion6">
+        <h2>Images carousel</h2>
+        <div class="slider-container">
+            <div class="sliders">
+                <div class="slider active">
+                   <img src="https://placeimg.com/400/400/animals" alt="animals">
+                </div>
+                <div class="slider">
+                    <h3>Hola soy el diapositiva 1</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe. Unde at quibusdam quidem in architecto cumque sit, inventore, corporis, praesentium natus consequatur iure iusto quasi earum molestias exercitationem accusamus!</p>
+                </div>
+                <div class="slider">
+                    <img src="https://placeimg.com/700/400/any" alt="any topic">
+                </div>
+                <div class="slider">
+                    <h3>Hola soy el diapostiva 3</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe. Unde at quibusdam quidem in architecto cumque sit, inventore, corporis, praesentium natus consequatur iure iusto quasi earum molestias exercitationem accusamus!</p>
+                </div>
+                <div class="slider">
+                    <img src="https://placeimg.com/700/400/arch" alt="any topic">
+                </div>
+            </div>
+            <div class="slide-btn">
+                <a href="#" class="prev">&laquo;</a>
+                <a href="#" class="next">&raquo;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion7">
+        <h2>Form Validation </h2>
+        <div class="form-container">
+            <h2 class="form-title">Form</h2>
+            <form class="contact-form" action="https://formsubmit.co/rowilmoran@gmail.com" method="POST">
+                <legend>Send your comment</legend>
+                <input type="text" name="name"  placeholder="Name" required title="Only letters allowed" pattern="^[a-zA-Z\s]+$">
+                <input type="email" name="email"  placeholder="E-mail" required title="input a valid email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+                <input type="subjet" name="subjet"  placeholder="subjet" title ="el asunto es requeridp" required>
+                <textarea name="message"  cols="50" rows="5" required title="255 character allowed" data-pattern= "^.{1,255}$" placeholder="Write your comment"></textarea>
+                <input type="submit" value="SEND">
+                <div class="contact-form-loader none">
+                    <img src="assets/tail-spin.svg" alt="loader">
+                </div>
+                <div class="contact-form-response none">
+                    <p>your comment has been sent</p>
+                </div>
+            </form>
+        </div>
+     
+    </section>
+
+    <section id="seccion8">
+        <h2>Filter Images</h2>
+        <div class="container">
+            <input type="search" id="my-input" placeholder="Search some images" >
+            <article class="images">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/arch" alt="architecture">
+                    <figcaption>Architecture</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/animals" alt="animals">
+                    <figcaption>animals</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/nature" alt="nature">
+                    <figcaption>nature</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/people" alt="people">
+                    <figcaption>people</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/tech" alt="technology">
+                    <figcaption>technology</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/arch" alt="architecture">
+                    <figcaption>architecture</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/animals" alt="animals">
+                    <figcaption>animals</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/people" alt="people">
+                    <figcaption>people</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/any" alt="any">
+                    <figcaption>any</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/any" alt="any">
+                    <figcaption>any</figcaption>
+                </figure>
+            </article>
+        </div>
+    </section>
+
+    <section id="seccion9">
+        <div class="lottery">
+            <h2>Countries Lottery</h2>
+            <article class="random  container">
+                <ul id="countries">
+                    <li>hola</li>
+                </ul>
+                <button id="button">Get a Country</button>
+            </article>
+        </div>
+    </section>
+
+    <section id="seccion10" class="container">
+        <h2>Geolocation</h2>
+        <div class="geolocation">
+            <p>Your current Location is </p>
+            <div id="current-location"></div>
+        </div>
     </section>
 
     <button id="dark-light-btn" class="button-x">
